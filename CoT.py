@@ -173,16 +173,22 @@ prompt_base = "## Label ONLY THE LAST Slovenian text, according to wether the wh
 
 COT = f"""{prompt_base}
 ## Answer:
-Let's think step by step to label this text according to wether the whole text is violent, includes hatespeech, calls to violent or subversive actions or sublevation (both explictly or figuratively), or not.
+Let's think step by step to label this text according to whether the whole text is violent, includes violent methods, suggests planned violent actions or events (both explictly or figuratively), or not.
 
 Step 1: Recognize words or locutions related to violence or calls to violent actions
-- Identify key words or locutions related to violence or calls to violent action such as 'bitka', 'upor', 'strmoglavljenje vlade', or 'boj'.
+- Identify key words or locutions related to violence or calls to violent action such as 'žrtva', 'akcija', 'napad', 'konačni obračun', or 'boj'.
 
-Step 2: Recognize words or locutions related to hatespeech
-- Identify key words or locutions related to hatespeech such as 'strupeni Žid', 'tujci ven', 'Čefur', or 'kurbe'.
+Step 2: Recognize words or locutions related to expansionist rhetoric, or words related to foreign conquest, invading or attacking state borders or war.
+- Identify key words or locutions related to expansionist rhetoric such as 'mrtvi straži', 'vpasti preko meje', 'or 'osvojiti meje'.
 
-Step 3: Label the text based on the previous steps
-- If you do find instances of violence, calls to violent actions, or hatespeech, label the text as 'Violent: True'
+Step 3: Recognize words or locutions related to signs of bodily harm, wounds or mutilation.
+- Identify key words or locutions related to signs of bodily harm, such as 'krv', 'rana', or 'smrt'.
+
+Step 4: Recognize words or locutions that show intent or metaphors towards violent actions.
+- Identify key words or locutions related to implied violence, such as 'pripraviti', 'zmagovalno', 'otpraviti', or 'izbrisano'.
+
+Step 5: Label the text based on the previous steps
+- If you do find instances of violence, calls to violent actions, or national expansionism, label the text as 'Violent: True'
 - If you do not find any instances of violence, calls to violent actions, or hatespeech, label the text as 'Violent: False'
 - Include a description of why the text has been labeled as such
 """
